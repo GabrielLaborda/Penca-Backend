@@ -6,7 +6,13 @@ const connectDB = require("./db");
 
 // Configuracion de la aplicación
 const app = express();
-app.use(cors());
+app.use(
+  cors({
+    origin: "https://penca-o5l1l2ir6-gabriels-projects-6df02773.vercel.app", // Cambia a la URL de tu frontend en Vercel
+    methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
+    credentials: true,
+  })
+);
 app.use(express.json());
 
 // Conexión a MongoDB
