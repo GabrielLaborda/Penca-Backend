@@ -6,7 +6,12 @@ const connectDB = require("./db");
 
 // Configuracion de la aplicación
 const app = express();
-app.use(cors());
+cors({
+  origin: "https://penca-iota.vercel.app", // Ajusta el origen a tu dominio frontend
+  methods: ["GET", "POST", "PUT", "PATCH", "DELETE"], // Lista de métodos permitidos
+  credentials: true, // Permite enviar cookies y credenciales
+  allowedHeaders: ["Content-Type", "Authorization"], // Encabezados permitidos
+});
 app.use(express.json());
 
 // Conexión a MongoDB
