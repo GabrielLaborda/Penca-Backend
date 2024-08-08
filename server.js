@@ -8,7 +8,7 @@ const connectDB = require("./db");
 const app = express();
 app.use(
   cors({
-    origin: "https://penca-o5l1l2ir6-gabriels-projects-6df02773.vercel.app", // Cambia a la URL de tu frontend en Vercel
+    origin: "https://penca-iota.vercel.app/",
     methods: "GET,HEAD,PUT,PATCH,POST,DELETE",
     credentials: true,
   })

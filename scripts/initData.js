@@ -1,3 +1,4 @@
+require("dotenv").config();
 const connectDB = require("../db");
 const Team = require("../models/Teams");
 const Group = require("../models/Group");
